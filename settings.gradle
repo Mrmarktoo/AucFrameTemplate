@@ -2,6 +2,7 @@ import groovy.json.JsonSlurper
 
 /**
  * 在 config.json 中 根据 appConfig 和 pkgConfig 来 include 本地模块
+ * config.json中配置信息后，自动导入到config.groovy脚本中，自动添加本地依赖库
  */
 def config = new JsonSlurper().parse(file("./config.json"))
 
