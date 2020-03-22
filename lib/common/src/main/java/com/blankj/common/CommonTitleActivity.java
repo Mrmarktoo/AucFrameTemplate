@@ -38,7 +38,7 @@ public abstract class CommonTitleActivity extends CommonBackActivity {
         }
         setTitleBar();
         BarUtils.setStatusBarColor(this, ColorUtils.getColor(R.color.colorPrimary));
-        BarUtils.addMarginTopEqualStatusBarHeight(commonTitleRootLayout);
+//        BarUtils.addMarginTopEqualStatusBarHeight(commonTitleRootLayout);
     }
 
     private void setTitleBar() {

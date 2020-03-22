@@ -28,7 +28,9 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     @SuppressLint("ResourceType")
     public void setRootLayout(@LayoutRes int layoutId) {
-        if (layoutId <= 0) return;
+        if (layoutId <= 0) {
+            return;
+        }
         setContentView(mContentView = LayoutInflater.from(this).inflate(layoutId, null));
     }
 

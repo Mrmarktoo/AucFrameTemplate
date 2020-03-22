@@ -3,7 +3,7 @@
  *     author: blankj
  *     blog  : http://blankj.com
  *     time  : 2019/07/13
- *     desc  :
+ *     desc  : 脚本配置实体类
  * </pre>
  */
 class DepConfig {
@@ -24,11 +24,11 @@ class DepConfig {
     }
 
     DepConfig(boolean isApply, String path) {
-        if (path.startsWith(":")) {
+        if (path.startsWith(":")) {//本地配置
             this.useLocal = true
             this.localPath = path
             this.isApply = isApply
-        } else {
+        } else {// 远程依赖库配置
             this.useLocal = false
             this.remotePath = path
             this.isApply = isApply
