@@ -26,6 +26,8 @@ class TaskDurationUtils {
         grd.addListener(new TaskExecutionListener() {
             @Override
             void beforeExecute(Task task) {
+                GLog.l("构建任务[$task.name] [$task.path] [$task.project.displayName]")
+                GLog.l("构建任务[$task.name]开始")
                 task.ext.startTime = System.currentTimeMillis()
             }
 
@@ -35,6 +37,7 @@ class TaskDurationUtils {
                 if (exeDuration >= 100) {
                     taskInfoList.add(new TaskInfo(task: task, exeDuration: exeDuration))
                 }
+                GLog.l("构建任务[$task.name] 耗时 [$exeDuration]")
             }
         })
         grd.addBuildListener(new BuildListener() {
